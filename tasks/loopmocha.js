@@ -16,7 +16,7 @@ module.exports = function loopmocha(grunt) {
         "reportLocation": grunt.option("reportLocation") || "<%=loopmocha.basedir%>/report",
         "timeout": grunt.option("timeout") || 600000,
         "grep": grunt.option("grep") || 0,
-        "debug": grunt.option("debug") || 0,
+        "debug-brk": (grunt.option('debug')) ? "" : 0,
         "reporter": grunt.option("reporter") || "spec",
         "parallel": false
       },
@@ -35,6 +35,9 @@ module.exports = function loopmocha(grunt) {
     },
     "local": {
       "src": "<%=loopmocha.src%>"
+    },
+    "webdriver": {
+      "src": ["<%=loopmocha.basedir%>/spec/selenium*.js"]
     },
     "ci": {
       "src": "<%=loopmocha.src%>",

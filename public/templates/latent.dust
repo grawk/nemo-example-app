@@ -1,0 +1,7 @@
+{>"layouts/master" /}
+
+{<body}
+    <h1>Latent page stuff</h1>
+
+    <div id="latent"></div>
+{/body}

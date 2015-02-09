@@ -66,7 +66,7 @@
     "grunt-localizr": "^0.1.0",
     "grunt-loop-mocha": "^0.3.0",
     "grunt-mocha-cli": "^1.7.0",
-    "mocha": "^1.18.0",
+    "mocha": "^2.0.0",
     "nconf": "~0.6.7",
     "nemo": "^0.3.1",
     "nemo-drivex": "^0.1.0",

@@ -14,5 +14,9 @@ module.exports = function (app) {
         res.render('index', model);
         
     });
+    app.get('/latent', function (req, res) {
 
+        res.render('latent', model);
+
+    });
 };
