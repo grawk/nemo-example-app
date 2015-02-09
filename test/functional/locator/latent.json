@@ -1,0 +1,10 @@
+{
+  "dynamicInput": {
+    "locator": "addedByScript",
+    "type": "id"
+  },
+  "doesntexist": {
+    "locator": "nowhere",
+    "type": "id"
+  }
+}
