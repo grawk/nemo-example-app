@@ -17,7 +17,7 @@ $ npm start
 Run Nemo
 
 ```bash
-$ NODE_ENV=local grunt automation
+$ grunt automation
 ```
 
 If you didn't get a successful test run, where you saw a browser open on your desktop,
@@ -30,6 +30,17 @@ will be considered.
 
 In this case, the only think in `local.json` is a reference to the local URL. By default, the tests will point
 to an identical application hosted on heroku: https://fast-castle-8102.herokuapp.com
+
+## Run with Perfecto Mobile
+
+1. edit the file `test/functional/config/perfecto.json` to include your account information and appropriate deviceID
+2. run:
+
+```bash
+$ NODE_ENV=perfecto grunt automation
+```
+
+This will cause nemo to use the perfecto.json file as an override, and launch a webdriver pointing to the perfecto mobile cloud.
 
 ## About the application
 
