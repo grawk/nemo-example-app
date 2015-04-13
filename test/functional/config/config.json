@@ -1,12 +1,16 @@
 {
+  "driver": {
+    "builders": {
+      "withCapabilities": [{
+        "browserName": "chrome"
+      }]
+    }
+  },
   "plugins": {
     "view": {
       "module": "nemo-view",
       "arguments": ["path:locator"]
     }
-  },
-  "driver": {
-    "browser": "firefox"
   },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"
