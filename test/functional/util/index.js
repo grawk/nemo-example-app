@@ -1,4 +1,14 @@
 'use strict';
+
+var _promiseLog = function (txt) {
+  return function (val) {
+    console.log('reportStep', txt, '\n');
+    if (val) {
+      return val;
+    }
+  }
+};
+
 module.exports.waitForJSReady = function waitForJSReady(nemo) {
   return nemo.driver.wait(function() {
       return nemo.driver.executeScript(function() {
@@ -28,4 +38,7 @@ module.exports.checkError = function (err, callback) {
     return function () { /* noop */};
   }
   return callback;
-}
+};
+module.exports.promiseLog = function (promis, logg) {
+  return promis.then(_promiseLog(logg));
+};

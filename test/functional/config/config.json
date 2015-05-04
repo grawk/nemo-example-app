@@ -10,6 +10,10 @@
     "view": {
       "module": "nemo-view",
       "arguments": ["path:locator"]
+    },
+    "perfectomobile": {
+      "module": "path:plugins/perfectomobile",
+      "arguments": ["path:report"]
     }
   },
   "data": {
