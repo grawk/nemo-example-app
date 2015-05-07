@@ -6,8 +6,8 @@
         "browserName": "mobileSafari",
         "version": "",
         "platform": "ANY",
-        "user": "mattedelman@gmail.com",
-        "password": "trouthunter",
+        "user": "foo.com",
+        "password": "",
         "deviceName": "A7302271E86090808BEB998BA2639AB18C5773A4"
       }]
     }
