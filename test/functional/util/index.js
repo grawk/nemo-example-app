@@ -10,12 +10,12 @@ var _promiseLog = function (txt) {
 };
 
 module.exports.waitForJSReady = function waitForJSReady(nemo) {
-  return nemo.driver.wait(function() {
-      return nemo.driver.executeScript(function() {
-          return document.getElementsByTagName('body')[0].getAttribute('data-loaded');
+  return nemo.driver.wait(function () {
+      return nemo.driver.executeScript(function () {
+        return document.getElementsByTagName('body')[0].getAttribute('data-loaded');
       });
     }
-    , 5000, 'JavaScript didn\'t load').then(function() {
+    , 5000, 'JavaScript didn\'t load').then(function () {
       return null;
     });
 };
@@ -35,10 +35,36 @@ module.exports.doneError = function (callback) {
 module.exports.checkError = function (err, callback) {
   if (err) {
     callback(err);
-    return function () { /* noop */};
+    return function () { /* noop */
+    };
   }
   return callback;
 };
 module.exports.promiseLog = function (promis, logg) {
   return promis.then(_promiseLog(logg));
+};
+
+module.exports.cleanup = function (nemo, done) {
+  var capsString;
+  if (nemo.perfectomobile) {
+
+
+    //var getReport = function () {
+      nemo.driver.close().then(function() {
+        nemo.perfectomobile.getReport().then(function (reportName) {
+          console.log('saved', reportName);
+          nemo.driver.quit().then(done, function (err) {
+            console.log('err??', err);
+            done(err);
+          });
+        });
+      });
+
+    //};
+
+  } else {
+    nemo.driver.quit().then(done, function (err) {
+      done(err);
+    });
+  }
 };

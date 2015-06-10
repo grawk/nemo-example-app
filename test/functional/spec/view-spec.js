@@ -7,9 +7,9 @@ describe('@view@', function () {
     nemo = Nemo(done);
   });
   after(function (done) {
-    nemo.driver.quit().then(done);
+    util.cleanup(nemo, done);
   });
-  it('should execute high level functionality using generic methods', function (done) {
+  it('should execute happy use case with view objects and methods', function (done) {
 
     //login
     nemo.driver.get(nemo.data.baseUrl);

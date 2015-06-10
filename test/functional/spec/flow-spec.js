@@ -19,7 +19,7 @@ describe('@flow@', function () {
     });
   });
   after(function (done) {
-    nemo.driver.quit().then(done);
+    util.cleanup(nemo, done);
   });
   it('should execute high level functionality using flow modules', function (done) {
     navigate.loginFailure('fail@fail.com', '11111111');

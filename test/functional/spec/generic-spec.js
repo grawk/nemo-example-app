@@ -7,7 +7,7 @@ describe('@generic@', function () {
     nemo = Nemo(done);
   });
   after(function (done) {
-    nemo.driver.quit().then(done);
+    util.cleanup(nemo, done);
   });
   it('should execute high level functionality using generic methods', function (done) {
     //login

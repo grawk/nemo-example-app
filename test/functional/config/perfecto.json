@@ -3,13 +3,19 @@
     "builders": {
       "usingServer": ["https://partners.perfectomobile.com/nexperience/perfectomobile/wd/hub"],
       "withCapabilities": [{
-        "browserName": "mobileSafari",
-        "version": "",
-        "platform": "ANY",
-        "user": "mattedelman@gmail.com",
-        "password": "trouthunter",
-        "deviceName": "A7302271E86090808BEB998BA2639AB18C5773A4"
+        "browserName":     "env:PERFECTO_BROWSER",
+        "user":            "env:PERFECTO_USER",
+        "password":        "env:PERFECTO_PW",
+        "deviceName":      "env:PERFECTO_DEVICE",
+        "platformVersion": "env:PERFECTO_VERSION",
+        "platformName":    "env:PERFECTO_PLATFORM"
       }]
+    }
+  },
+  "plugins": {
+    "perfectomobile": {
+      "module": "path:plugins/perfectomobile",
+      "arguments": ["path:report"]
     }
   }
 }

@@ -13,9 +13,6 @@ module.exports = function loopmocha(grunt) {
     "options": {
       "basedir": path.resolve(__dirname, "../test/functional"),
       "nemoBaseDir": '<%=loopmocha.options.basedir%>',
-      "driver": {
-        "browser": "firefox"
-      },
       "mocha": {
         "timeout": grunt.option("timeout") || 600000,
         "grep": grunt.option("grep") || 0,
@@ -34,6 +31,32 @@ module.exports = function loopmocha(grunt) {
           "description": "default"
         }
       ]
+    },
+    "perfecto": {
+      "src": ["<%=loopmocha.options.basedir%>/spec/*.js"],
+      "options": {
+        "PERFECTO_USER": "mattedelman@gmail.com",
+        "PERFECTO_PW": "trouthunter",
+        "NODE_ENV": "perfecto",
+        "mocha": {
+          "grep": "@login@"
+        },
+        "loop": {
+          "parallel": true
+        },
+        "iterations": [
+          {
+            "description": "android",
+            "PERFECTO_BROWSER": "chrome",
+            "PERFECTO_DEVICE": "HT29BW305170"
+          },
+          {
+            "description": "ios",
+            "PERFECTO_BROWSER": "mobileSafari",
+            "PERFECTO_DEVICE": "3152168C4EAA1E2A5DE93CF7B89222720E3A62E0"
+          }
+        ]
+      }
     }
   };
 };
