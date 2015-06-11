@@ -15,9 +15,7 @@ module.exports.waitForJSReady = function waitForJSReady(nemo) {
         return document.getElementsByTagName('body')[0].getAttribute('data-loaded');
       });
     }
-    , 5000, 'JavaScript didn\'t load').then(function () {
-      return null;
-    });
+    , 10000, 'JavaScript didn\'t load');
 };
 
 module.exports.doneSuccess = function (callback) {
