@@ -7,12 +7,23 @@
     "screenshot": {
       "module": "nemo-screenshot",
       "arguments": ["path:report"]
+    },
+    "eyes": {
+      "module": "nemo-eyes"
     }
   },
   "driver": {
-    "browser": "firefox"
+    "browser": "config:BROWSER"
   },
   "data": {
-    "baseUrl": "https://fast-castle-8102.herokuapp.com"
-  }
+    "baseUrl": "https://fast-castle-8102.herokuapp.com",
+    "eyes" : {
+      "apiKey" : "env:applitools_api_key",      /* Required,  */
+      "width" : 800,                /* Required, format - Number */
+      "height" : 600,               /* Required, format - Number */
+      "log" : true,                  /* Optional */
+      "fullPageScreenShot" : true   /* Optional */
+    }
+  },
+  "BROWSER": "firefox"
 }
