@@ -24,8 +24,8 @@ describe('@eyes@', function () {
       return true;
     }).then(function () {
       done();
-    }, function (err) {
+    }).thenCatch(function (err) {
       done(err);
-    })
+    });
   });
 });

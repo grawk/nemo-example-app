@@ -1,0 +1,28 @@
+{>"layouts/master" /}
+{<title}Nemo + Applitools Eyes Demo{/title}
+{<stylesheet}responsive{/stylesheet}
+{<body}
+<h1>{@pre type="content" key="header"/}</h1>
+<div class="nav">{@pre type="content" key="nav"/}</div>
+<div class="foo">
+    <h2>{@pre type="content" key="foo.title"/}</h2>
+    <p>{@pre type="content" key="foo.description"/}</p>
+</div>
+<div class="bar">
+    <h2>{@pre type="content" key="bar.title"/}</h2>
+    <p>{@pre type="content" key="bar.description"/}</p>
+</div>
+<div class="bing">
+    <h2>{@pre type="content" key="bing.title"/}</h2>
+    <p>{@pre type="content" key="bing.description"/}</p>
+</div>
+<div class="bang">
+    <h2>{@pre type="content" key="bang.title"/}</h2>
+    <p>{@pre type="content" key="bang.description"/}</p>
+</div>
+<div class="right">
+    <h2>{@pre type="content" key="right.title"/}</h2>
+    <p>{@pre type="content" key="right.description"/}</p>
+</div>
+{/body}
+

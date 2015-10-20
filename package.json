@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "data-driven": "^1.0.0",
-    "eyes.selenium": "0.0.39",
+    "eyes.selenium": "https://github.com/grawk/Eyes.Selenium.JavaScript.git#master",
     "grunt": "^0.4.4",
     "grunt-config-dir": "^0.3.2",
     "grunt-contrib-clean": "^0.5.0",

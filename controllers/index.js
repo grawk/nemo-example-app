@@ -14,5 +14,10 @@ module.exports = function (app) {
         res.render('index', model);
         
     });
+    app.get('/responsive', function (req, res) {
+
+        res.render('responsive', model);
+
+    });
 
 };
