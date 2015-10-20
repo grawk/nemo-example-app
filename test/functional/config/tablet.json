@@ -1,0 +1,18 @@
+{
+  "plugins": {
+    "eyes": {
+      "module": "path:plugin/eyes",
+      "arguments": [{
+        "sdk": {
+          "setApiKey": "env:applitools_api_key",
+          "setBatch": "tablet",
+          "setForceFullPageScreenshot": true
+        },
+        "viewport": {
+          "width": 1024,
+          "height": 600
+        }
+      }]
+    }
+  }
+}

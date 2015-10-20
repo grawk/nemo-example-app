@@ -44,12 +44,15 @@ module.exports = function loopmocha(grunt) {
                 },
                 "iterations": [
                     {
-                        "description": "firefox",
-                        "BROWSER": "firefox"
+                        "description": "desktop"
                     },
                     {
-                        "description": "chrome",
-                        "BROWSER": "chrome"
+                        "description": "phone",
+                        "NODE_ENV": "phone"
+                    },
+                    {
+                        "description": "tablet",
+                        "NODE_ENV": "tablet"
                     }
                 ]
             }

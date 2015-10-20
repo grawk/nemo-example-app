@@ -9,21 +9,25 @@
       "arguments": ["path:report"]
     },
     "eyes": {
-      "module": "nemo-eyes"
+      "module": "path:plugin/eyes",
+      "arguments": [{
+        "sdk": {
+          "setApiKey": "env:applitools_api_key",
+          "setBatch": "desktop",
+          "setForceFullPageScreenshot": true
+        },
+        "viewport": {
+          "width": 1400,
+          "height": 600
+        }
+      }]
     }
   },
   "driver": {
     "browser": "config:BROWSER"
   },
   "data": {
-    "baseUrl": "https://fast-castle-8102.herokuapp.com",
-    "eyes" : {
-      "apiKey" : "env:applitools_api_key",      /* Required,  */
-      "width" : 800,                /* Required, format - Number */
-      "height" : 600,               /* Required, format - Number */
-      "log" : true,                  /* Optional */
-      "fullPageScreenShot" : true   /* Optional */
-    }
+    "baseUrl": "http://localhost:8000"
   },
   "BROWSER": "firefox"
 }

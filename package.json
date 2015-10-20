@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "data-driven": "^1.0.0",
+    "eyes.selenium": "0.0.39",
     "grunt": "^0.4.4",
     "grunt-config-dir": "^0.3.2",
     "grunt-contrib-clean": "^0.5.0",
@@ -61,10 +62,9 @@
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^1.18.0",
     "nconf": "~0.6.7",
-    "nemo": "^1.0.6",
-    "nemo-eyes": "0.0.4",
-    "nemo-screenshot": "^1.1.0",
-    "nemo-view": "^1.2.0",
+    "nemo": "^1.1.0-alpha.1",
+    "nemo-screenshot": "^1.2.0-alpha.1",
+    "nemo-view": "^1.3.0-alpha.1",
     "supertest": "^0.9.0",
     "xunit-file": "0.0.5"
   }
