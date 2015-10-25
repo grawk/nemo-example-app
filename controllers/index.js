@@ -14,8 +14,15 @@ module.exports = function (app) {
         res.render('index', model);
         
     });
-    app.get('/responsive', function (req, res) {
+    app.get('/responsive/us', function (req, res) {
 
+        res.render('responsive', model);
+
+    });
+    app.get('/responsive/de', function (req, res) {
+        res.locals.context = {
+            locality: {'country': 'US', 'language': 'de'}
+        };
         res.render('responsive', model);
 
     });

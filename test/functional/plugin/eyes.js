@@ -8,6 +8,25 @@ var LogHandler = EyesSelenium.ConsoleLogHandler;
 module.exports = {
 
     "setup": function (config, nemo, callback) {
+        if (config.mock && config.mock === "true") {
+            var emptyPromise = function (val) {
+
+                    return function () {
+                        return nemo.driver.controlFlow().execute(function () {
+                            return nemo.wd.promise.fulfilled(val || 'fulfilled');
+                        });
+
+                    }
+            };
+            nemo.eyes = {
+                open: emptyPromise(),
+                setBatch: function () {},
+                close: emptyPromise({isPassed: true, url: 'Eyes in mock mode.. No URL'}),
+                checkWindow: emptyPromise()
+            };
+            return callback(null);
+        }
+
         var eyes = nemo.eyes = new Eyes();
         if (!config.sdk && config.sdk.setApiKey) {
             return callback(new Error('nemo-eyes: apiKey is required'));

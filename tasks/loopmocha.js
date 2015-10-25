@@ -32,7 +32,7 @@ module.exports = function loopmocha(grunt) {
                 }
             ]
         },
-        "eyes": {
+        "responsive": {
             "src": "<%=loopmocha.src%>",
             "options": {
                 "loop": {
@@ -40,11 +40,12 @@ module.exports = function loopmocha(grunt) {
                     "parallel": true
                 },
                 "mocha": {
-                    "grep": "@eyes@"
+                    "grep": "@responsive@"
                 },
                 "iterations": [
                     {
-                        "description": "desktop"
+                        "description": "desktop",
+                        "NODE_ENV": "desktop"
                     },
                     {
                         "description": "phone",

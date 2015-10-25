@@ -2,32 +2,32 @@
   "plugins": {
     "view": {
       "module": "nemo-view",
-      "arguments": ["path:locator"]
-    },
-    "screenshot": {
-      "module": "nemo-screenshot",
-      "arguments": ["path:report"]
+      "arguments": [
+        "path:locator"
+      ]
     },
     "eyes": {
       "module": "path:plugin/eyes",
-      "arguments": [{
-        "sdk": {
-          "setApiKey": "env:applitools_api_key",
-          "setBatch": "desktop",
-          "setForceFullPageScreenshot": true
-        },
-        "viewport": {
-          "width": 1400,
-          "height": 600
+      "arguments": [
+        {
+          "sdk": {
+            "setApiKey": "env:applitools_api_key",
+            "setBatch": "desktop",
+            "setForceFullPageScreenshot": true
+          },
+          "viewport": {
+            "width": 1200,
+            "height": 600
+          },
+          "mock": "env:applitools_mock"
         }
-      }]
+      ]
     }
   },
-  "driver": {
-    "browser": "config:BROWSER"
-  },
   "data": {
-    "baseUrl": "http://localhost:8000"
+    "formFactor": "env:NODE_ENV"
   },
-  "BROWSER": "firefox"
+  "driver": {
+    "browser": "firefox"
+  }
 }
