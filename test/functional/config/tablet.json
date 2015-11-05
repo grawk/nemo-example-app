@@ -5,8 +5,10 @@
       "arguments": [{
         "sdk": {
           "setApiKey": "env:applitools_api_key",
-          "setBatch": "tablet",
-          "setForceFullPageScreenshot": true
+          "setBatch": "TABLET",
+          "setSaveNewTests": true,
+          "setForceFullPageScreenshot": true,
+          "setMatchLevel": "Layout"
         },
         "viewport": {
           "width": 950,

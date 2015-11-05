@@ -24,7 +24,7 @@
 
 
 
-
+    <script data-main="/js/app" src="/js/require.js"></script>
 
 </head>
 <body>
@@ -65,7 +65,7 @@
 
             <div class="pure-u-3-4">
                 <h5 class="email-name">Tilo Mitra</h5>
-                <h4 class="email-subject">{@pre type="content" key="subject"/}</h4>
+                <h4 class="email-subject">Hello from Toronto</h4>
                 <p class="email-desc">
                     Hey, I just wanted to check in with you from Toronto. I got here earlier today.
                 </p>
@@ -163,20 +163,21 @@
                 <div class="pure-u-1-2">
                     <h1 class="email-content-title">{@pre type="content" key="subject"/}</h1>
                     <p class="email-content-subtitle">
-                        From <a>Tilo Mitra</a> at <span>3:56pm, April 3, 2012</span>
+                        From <a>Tilo Mitra</a><!-- at <span>3:56pm, April 3, 2012</span>-->
                     </p>
                 </div>
 
                 <div class="email-content-controls pure-u-1-2">
-                    <button class="secondary-button pure-button">Reply</button>
-                    <button class="secondary-button pure-button">Forward</button>
-                    <button class="secondary-button pure-button">Move to</button>
+                    <button id="reply" class="secondary-button pure-button">Reply</button>
+                    <button id="forward" class="secondary-button pure-button">Forward</button>
+                    <button id="moveto" class="secondary-button pure-button">Move to</button>
                 </div>
             </div>
 
             <div class="email-content-body">
+                <div id="verify"></div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    {@pre type="content" key="paragraph"/}
                 </p>
                 <p>
                     Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -197,23 +198,6 @@
 </div>
 
 <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
-
-<script>
-    YUI().use('node-base', 'node-event-delegate', function (Y) {
-
-        var menuButton = Y.one('.nav-menu-button'),
-                nav        = Y.one('#nav');
-
-        // Setting the active class name expands the menu vertically on small screens.
-        menuButton.on('click', function (e) {
-            nav.toggleClass('active');
-        });
-
-        // Your application code goes here...
-
-    });
-</script>
-
 
 
 

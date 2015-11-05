@@ -1,10 +1,10 @@
 {
   "plugins": {
     "view": {
-      "module": "nemo-view",
-      "arguments": [
-        "path:locator"
-      ]
+      "module": "nemo-view"
+    },
+    "util": {
+      "module": "path:plugin/util"
     },
     "eyes": {
       "module": "path:plugin/eyes",
@@ -12,8 +12,10 @@
         {
           "sdk": {
             "setApiKey": "env:applitools_api_key",
-            "setBatch": "desktop",
-            "setForceFullPageScreenshot": true
+            "setBatch": "DESKTOP",
+            "setForceFullPageScreenshot": true,
+            "setSaveNewTests": true,
+            "setMatchLevel": "Layout"
           },
           "viewport": {
             "width": 1200,
@@ -24,10 +26,10 @@
       ]
     }
   },
-  "data": {
-    "formFactor": "env:NODE_ENV"
-  },
   "driver": {
-    "browser": "firefox"
+    "browser": "chrome"
+  },
+  "data": {
+    "uniquekey": 5
   }
 }

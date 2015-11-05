@@ -23,6 +23,7 @@ module.exports = function (app) {
         res.locals.context = {
             locality: {'country': 'US', 'language': 'de'}
         };
+        //model.breakclass = 'breakit';
         res.render('responsive', model);
 
     });
