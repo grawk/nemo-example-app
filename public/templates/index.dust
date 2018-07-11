@@ -27,6 +27,7 @@
         <p><label for="cc">Credit Card #</label>
         <input type="text" name="cc" id="cc" value=""/>
         </p>
+{@eq key=cctreatment value="classic"}
         <p><label for="type">Type</label>
         <select name="type" id="type">
             <option value="">Select One</option>
@@ -34,6 +35,7 @@
             <option value="Vaster Card">Vaster Card</option>
         </select>
         </p>
+{/eq}
         <p>
         <input type="button" id="ccbutton" value="Add Card"/>
         </p>
